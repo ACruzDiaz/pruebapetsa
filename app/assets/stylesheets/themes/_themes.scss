@@ -1,0 +1,16 @@
+
+
+body{
+    background-color: $primary-color-light;
+
+}
+
+
+body.darkmode{
+    background-color: $primary-color-dark;
+    $primary-color: color("orange", "base") !default;
+    $secondary-color: color("red", "base") !default;
+    $card-link-color: color('red','base') !default;
+    $input-border-color: color("red", "base") !default;
+    $link-color: color("grey", "darken-4") !default;
+}

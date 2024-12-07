@@ -1,7 +1,19 @@
 /*
 *= require material_icons
 */
+
 @import "materialize/components/color-variables";
 $primary-color: color("red", "base") !default;
 $secondary-color: color("red", "base") !default;
+$card-link-color: color('red','darken-2') !default;
+$input-border-color: color("red", "base") !default;
+$link-color: color("grey", "darken-4") !default;
+
+@import "themes/dark";
+@import "themes/light";
+
+
 @import "materialize";
+
+
+

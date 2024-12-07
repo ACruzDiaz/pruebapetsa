@@ -1,0 +1,72 @@
+@import "variables";
+
+body{
+    background-color: $primary-color-light;
+
+}
+
+p, ol, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px; }
+    
+
+
+  pre {
+    background-color: $primary-color-light;
+    padding: 10px;
+    font-size: 11px; }
+  
+  a {
+    color: $secondary-color-light; }
+  
+  a:visited {
+    color: $decoration-color-light}
+  
+  a:hover {
+    color: $secondary-color-light;}
+  
+  th {
+    padding-bottom: 5px; }
+  
+  td {
+    padding: 0 5px 7px; }
+  
+  div.field,
+  div.actions {
+    margin-bottom: 10px; }
+  
+  #notice {
+    color: green; }
+  
+  .field_with_errors {
+    width: 100%;
+    padding: 2px;
+    background-color: $primary-color-light; ;
+    display: table; }
+  
+  #error_explanation {
+    width: 100%;
+    border: 2px solid $primary-color-light;
+    padding: 7px 7px 0;
+    margin-bottom: 20px;
+    background-color: $primary-color-light; }
+  
+  #error_explanation h2 {
+    
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: $primary-color-light;
+    color: $secondary-color-light; }
+  
+  #error_explanation ul li {
+    font-size: 12px;
+    list-style: square; }
+  
+  label {
+    display: block; }
+  
+    

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name = "turbolinks-visit-control" content="reload">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', media: 'all'%>
+
   </head>
 
   <body>
@@ -17,11 +18,18 @@
           <%= link_to notes_path, class: 'brand-logo center' do %>
             My note collection
           <% end %>
+          <a href="#" data-target ="mobile-demo" class="rigth sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li >
+              <a id="themeBtn" class="waves-effect waves-light btn ">Night Mode</a>  
+            </li>
+          </ul>
         </div>
-      </nav>
-    </div>
 
-    <div class="container">
+      </nav>
+    </div> 
+
+    <div class="container ">
       <%= yield %>
     </div>
   </body>

@@ -1,0 +1,96 @@
+@import "variables";
+
+body.darkmode{
+    background-color: $primary-color-dark;
+    
+    .card-content{
+      background-color:$decoration-color-dark;
+      color: $secondary-color-dark;
+    }
+    .month-section{
+      color: $secondary-color-dark;
+    }
+    input[type="text"]{
+      color: $secondary-color-dark;
+    }
+    .materialize-textarea {
+      color: $secondary-color-dark;
+    }
+    .card-action{
+      background-color:$decoration-color-dark;
+      color: $secondary-color-dark;
+    }
+
+    p, ol, td {
+      font-family: verdana, arial, helvetica, sans-serif;
+      font-size: 13px;
+      line-height: 18px; }
+      
+    
+    
+    pre {
+      background-color: $primary-color-dark;
+      padding: 10px;
+      font-size: 11px; }
+    
+    a {
+      color: $secondary-color-dark; }
+    
+    a:visited {
+      color: $decoration-color-dark}
+    
+    a:hover {
+      color: $secondary-color-dark;}
+    
+    th {
+      padding-bottom: 5px; }
+    
+    td {
+      padding: 0 5px 7px; }
+    
+    div.field,
+    div.actions {
+      margin-bottom: 10px; }
+    
+    #notice {
+      color: green; }
+    
+    .field_with_errors {
+      width: 100%;
+      padding: 2px;
+      background-color: $primary-color-dark; ;
+      display: table; }
+    
+    #error_explanation {
+      width: 100%;
+      border: 2px solid $primary-color-dark;
+      padding: 7px 7px 0;
+      margin-bottom: 20px;
+      background-color: $primary-color-dark;
+      color: $secondary-color-dark; }
+    
+    #error_explanation h2 {
+      
+      text-align: left;
+      font-weight: bold;
+      padding: 5px 5px 5px 15px;
+      font-size: 12px;
+      margin: -7px -7px 0;
+      background-color: $primary-color-dark;
+      color: $secondary-color-dark; }
+    
+    #error_explanation ul li {
+      font-size: 12px;
+      list-style: square; }
+    
+    label {
+      display: block; }
+
+    .material-icons{
+      color: $secondary-color-dark;
+    }
+    
+}
+
+
+  
