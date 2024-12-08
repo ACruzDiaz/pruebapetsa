@@ -9,6 +9,7 @@
   <% @notes.each do |month, setNotes| %>
     <p class="month-section">
       <%= t('date.month_names')[month]%>
+    <div class="divider"></div>
     </p>
       <% setNotes.each do |note|%>
       <%= link_to note_path(note) do %>

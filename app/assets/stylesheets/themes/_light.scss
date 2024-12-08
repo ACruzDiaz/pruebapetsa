@@ -2,7 +2,9 @@
 
 body{
     background-color: $primary-color-light;
-
+    .month-section{
+      font-size: large;
+    }
 }
 
 p, ol, td {

@@ -1,52 +1,31 @@
-Note.create([
-  {
-    title: "Old",
-    body: "MyOldTest",
-    created_at: 2.days.from_now,
-  },
-  {
-    title: "New",
-    body: "MyNewText",
-    created_at: 3.days.from_now,
-  },
-  {
-    title: "Older",
-    body: "MyOlderText",
-    created_at: 1.day.from_now,
-  },
-  {
-    title: 'Hello world!',
-    body: 'This is my first note',
-    created_at: Time.now,
-  },
-  {
-    title: 'hello_world',
-    body: 'The same, but underscored',
-    created_at: 1.day.ago,
-  },
-  {
-    title: 'hello\\ world',
-    body: 'The same, but with backslash-escaped space',
-    created_at: 2.day.ago,
-  },
-  {
-    title: 'Hola mundo!',
-    body: 'The same, but in Spanish',
-    created_at: 3.day.ago,
-  },
-  {
-    title: "Today's humidity: 70%",
-    body: 'A little hotter than usual',
-    created_at: 4.day.ago,
-  },
-  {
-    title: 'This one is a little older',
-    body: 'By half a year',
-    created_at: 6.months.ago,
-  },
-  {
-    title: 'world_hello',
-    body: "Ive run out of ideas\n\nBut I do have\n\na lot of linebreaks.",
-    created_at: 5.day.ago,
-  },
-].each {|r| r[:updated_at] = r[:created_at] })
+word_list = 'recordar hacer lista comprar frutas mandado queso ir a no olvidar asistir componer decir correr en la mañana tarde noche ayer hoy'
+word_array = word_list.split
+
+def random_title(word_array)
+  @title = ''
+  rand(3..6).times do |i|
+    random_index = rand(0..word_array.length-1)
+    @title = @title + word_array[random_index] + " "
+  end
+  @title
+end
+
+def random_body(word_array)
+  @body = ''
+  rand(10..20).times do |i|
+    random_index = rand(0..word_array.length-1)
+    @body = @body + word_array[random_index] + " " 
+  end
+  @body
+end
+
+200.times do |i|
+  Note.create!(
+    title: random_title(word_array),
+    body: random_body(word_array),
+    created_at: rand(1..300).days.from_now,
+    updated_at: rand(1..300).days.from_now,
+  )
+end
+
+
