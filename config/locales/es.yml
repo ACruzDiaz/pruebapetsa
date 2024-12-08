@@ -10,12 +10,17 @@ es:
   body: "Contenido"
   error_message_title: " errores impiden guardar esta nota:"
   activerecord:
+    attributes:
+      note:
+        title: "Título"
+        body: "Contenido"
     errors:
       models:
         note:
           attributes:
             title:
               blank: "no puede estar vacio"
+              taken: "ya se encuentra registrado en la base de datos."
             body:
               blank: "no puede estar vacio"
   new_tooltip: "Nueva nota"
