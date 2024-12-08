@@ -1,0 +1,27 @@
+
+es:
+  app_title: "Mi colección de notas"
+  date:
+    month_names: [~,Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+  search_placeholder: "Buscar por titulo"
+  darkmode: "Oscuro"
+  lightmode: "Claro"
+  title: "Título"
+  body: "Contenido"
+  error_message_title: " errores impiden guardar esta nota:"
+  activerecord:
+    errors:
+      models:
+        note:
+          attributes:
+            title:
+              blank: "no puede estar vacio"
+            body:
+              blank: "no puede estar vacio"
+  new_tooltip: "Nueva nota"
+  edit_tooltip: "Editar"
+  delete_tooltip: "Eliminar"
+  create_tooltip: "Crear"
+  confirmation_message: "Estas seguro?"
+  delete_confirmation: "La nota fue eliminada"
+  create_confirmation: "La nota ha sido creada."

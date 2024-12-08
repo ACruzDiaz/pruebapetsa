@@ -10,6 +10,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "client/dynamic.js"
+// import "client/language.js"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

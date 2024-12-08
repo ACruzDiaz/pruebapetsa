@@ -8,7 +8,7 @@ class NotesController < ApplicationController
     if filters && filters[:title].present?
       @notes = @notes.search_by_title(filters[:title])
     end
-    @notes = @notes.group_by {|note| note.created_at.strftime("%B")}
+    @notes = @notes.group_by {|note| note.created_at.month}
 
     @notes
   end

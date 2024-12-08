@@ -1,6 +1,6 @@
 let isDark = true;
 document.addEventListener('DOMContentLoaded', ()=>{
-
+    
     const theme = localStorage.getItem('theme') || 'lightmode'
     document.body.classList.add(theme)
 
@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             document.body.classList.remove(actualTheme)
             document.body.classList.add(newTheme)
             localStorage.setItem('theme', newTheme);
-
-            
         }
     })
 

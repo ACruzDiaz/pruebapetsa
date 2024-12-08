@@ -30,4 +30,30 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: "My note collection"
+  date:
+    month_names: [~, January, February, March, Abril, May, June, July, August, September, October, November, December]
+  search_placeholder: "Search by title"
+  title_placeholder: "Title"
+  body_placeholder: "Body"
+  darkmode: "Night Mode"
+  lightmode: "Day Mode"
+  error_message_title: "errors prohibited this note from being saved:"
+  title: "Title"
+  body: "Body"
+  activerecord:
+    errors:
+      models:
+        note:
+          attributes:
+            title:
+              blank: "can't be blank"
+            body:
+              blank: "can't be blank"
+  new_tooltip: "New note"
+  edit_tooltip: "Edit"
+  delete_tooltip: "Delete"
+  create_tooltip: "Create"
+  confirmation_message: "Are you sure?"
+  delete_confirmation: "Note was successfully destroyed."
+  create_confirmation: "Note was successfully created."

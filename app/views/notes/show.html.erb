@@ -13,11 +13,11 @@
         <p style="white-space: pre-line"><%= @note.body %></p>
       </div>
       <div class="card-action  ">
-        <%= link_to @note, title: 'Delete', method: :delete, data: { confirm: 'Are you sure?' }, class: '' do %>
+        <%= link_to @note, title: t('delete_tooltip'), method: :delete, data: { confirm: t('confirmation_message')}, class: '' do %>
           <%= material_icon.delete %>
         <% end %>
 
-        <%= link_to edit_note_path(@note), title: 'Edit', class: ' right' do %>
+        <%= link_to edit_note_path(@note), title: t('edit_tooltip'), class: ' right' do %>
           <%= material_icon.mode_edit %>
         <% end %>
       </div>
