@@ -4,7 +4,7 @@ class Note < ApplicationRecord
 
   def self.search_by_title(keywords)
     keywords.split.reduce(self) do |acc, word|
-      acc.where "title LIKE ? ESCAPE '\\'", "%#{escape_sql_pattern word}%"
+      acc.where "title LIKE ? ESCAPE '\\' OR body LIKE ? ESCAPE '\\'", "%#{escape_sql_pattern word}%", "%#{escape_sql_pattern word}%"
     end
   end
 

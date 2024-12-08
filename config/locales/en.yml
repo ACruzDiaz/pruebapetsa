@@ -33,10 +33,10 @@ en:
   app_title: "My note collection"
   date:
     month_names: [~, January, February, March, Abril, May, June, July, August, September, October, November, December]
-  search_placeholder: "Search by title"
+  search_placeholder: "Search"
   title_placeholder: "Title"
   body_placeholder: "Body"
-  darkmode: "Night Mode"
+  darkmode: "Change Theme"
   lightmode: "Day Mode"
   error_message_title: "errors prohibited this note from being saved:"
   title: "Title"

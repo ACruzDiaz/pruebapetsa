@@ -5,8 +5,8 @@ class NotesController < ApplicationController
     @notes = Note.order(key: order)
 
     filters = params[:filters]&.to_unsafe_h&.symbolize_keys
-    if filters && filters[:title].present?
-      @notes = @notes.search_by_title(filters[:title])
+    if filters && filters[:query].present?
+      @notes = @notes.search_by_title(filters[:query])
     end
     @notes = @notes.group_by {|note| note.created_at.month}
 
