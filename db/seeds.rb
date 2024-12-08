@@ -7,6 +7,7 @@ def random_title(word_array)
     random_index = rand(0..word_array.length-1)
     @title = @title + word_array[random_index] + " "
   end
+  @title = @title.strip
   @title
 end
 
@@ -16,6 +17,7 @@ def random_body(word_array)
     random_index = rand(0..word_array.length-1)
     @body = @body + word_array[random_index] + " " 
   end
+  @body = @body.strip
   @body
 end
 

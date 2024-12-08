@@ -1,4 +1,5 @@
 class Note < ApplicationRecord
+  before_validation :trimInput
   validates :title, :body, presence: true, uniqueness: true
 
   def self.search_by_title(keywords)
@@ -11,5 +12,10 @@ class Note < ApplicationRecord
 
   def self.escape_sql_pattern(pattern)
     pattern.gsub(/[%_\\]/, '\\\\\\&')
+  end
+
+  def trimInput
+    self.title = title.strip unless title.nil?
+    self.body = body.strip unless body.nil?
   end
 end
