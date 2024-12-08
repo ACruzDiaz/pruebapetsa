@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  
   scope "(:locale)", locale: /en|es/ do
-    root to: redirect("notes")
+    resources :notes, path: ''
+    root to: "notes#index"
+    
   end
-  resources :notes
 end

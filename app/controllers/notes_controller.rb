@@ -1,8 +1,8 @@
 class NotesController < ApplicationController
   before_action :set_note, only: %i[ show edit update destroy ]
 
-  def index
-    @notes = Note.order(created_at: :desc)
+  def index(key = "title",order = "asc")
+    @notes = Note.order(key: order)
 
     filters = params[:filters]&.to_unsafe_h&.symbolize_keys
     if filters && filters[:title].present?
@@ -13,6 +13,7 @@ class NotesController < ApplicationController
     @notes
   end
 
+ 
   def show
   end
 
