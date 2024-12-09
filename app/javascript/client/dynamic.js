@@ -1,6 +1,7 @@
 let isDark = true;
 document.addEventListener('DOMContentLoaded', ()=>{
-    
+    let elems = document.querySelectorAll('.sidenav')
+    let instances = M.Sidenav.init(elems)
     const theme = localStorage.getItem('theme') || 'lightmode'
     document.body.classList.add(theme)
 

@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 d6033bd72988cd1a915f5c10632fcdb440cac2d9 vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733467345 -0800	commit (initial): initial commit
+d6033bd72988cd1a915f5c10632fcdb440cac2d9 730768c723ae14e3344a51984e4c169c12ec378a vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733507665 -0800	commit: Notes divided by month
+730768c723ae14e3344a51984e4c169c12ec378a d27cf13ccddda6ba030adc10676265171de57b0c vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733507925 -0800	commit: Enchanced index responsivity
+d27cf13ccddda6ba030adc10676265171de57b0c 0ae312e4753e02475db317ef997f921e2010ca7e vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733591818 -0800	commit: darkmode functionality implemented
+0ae312e4753e02475db317ef997f921e2010ca7e 22b4dc91d4d62f85c71f327ffc0c5527bf46e7f1 vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733678429 -0800	commit: website language selection funcionality added
+22b4dc91d4d62f85c71f327ffc0c5527bf46e7f1 02294ed10749a7d133854bc538ee532c2b4f04b1 vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733686416 -0800	commit: app redirection to root directory
+02294ed10749a7d133854bc538ee532c2b4f04b1 bc6cfa4318c2655945a706385c4dab19d2a7f8c6 vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733689610 -0800	commit: 200 dynamic notes seed generator funcionality implemented
+bc6cfa4318c2655945a706385c4dab19d2a7f8c6 0fc6b3a242b0674e2d798e9a681fa4c92c28013d vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733691143 -0800	commit: title field now is unique
+0fc6b3a242b0674e2d798e9a681fa4c92c28013d 190bab566f28a9d481117b817a0cbf938d2dbd10 vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733692031 -0800	commit: trimed white space from title and body
+190bab566f28a9d481117b817a0cbf938d2dbd10 35d76b0997902d50c81dd585f6f03ea835a3f833 vboxuser <vboxuser@ubuntufossa.myguest.virtualbox.org> 1733693956 -0800	commit: search by title and body funcionality implemented

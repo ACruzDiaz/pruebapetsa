@@ -32,6 +32,15 @@
 
       </nav>
     </div> 
+      <ul id="mobile-demo" class="sidenav">
+        <li >
+          <a id="themeBtn" class="waves-effect waves-light btn ">
+            <%=t('darkmode')%>
+          </a>  
+        <li> <%=link_to "Español", url_for(locale:'es'), class: "btn btn-primary" %></li>
+        <li> <%=link_to "English", url_for(locale:'en'), class: "btn btn-primary" %></li>
+        </li>
+      </ul>
 
     <div class="container ">
       <%= yield %>
