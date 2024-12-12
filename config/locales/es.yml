@@ -30,3 +30,4 @@ es:
   confirmation_message: "Estas seguro?"
   delete_confirmation: "La nota fue eliminada"
   create_confirmation: "La nota ha sido creada."
+  sorting: [Mas viejas, Mas nuevas, A-Z, Z-A]

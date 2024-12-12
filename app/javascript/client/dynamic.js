@@ -1,7 +1,12 @@
 let isDark = true;
 document.addEventListener('DOMContentLoaded', ()=>{
     let elems = document.querySelectorAll('.sidenav')
+    let select = document.querySelectorAll('select')
+    
+    let selInit = M.FormSelect.init(select, {classes: "my_selector"})
+    // let selInstance = M.FormSelect.getInstance(select)
     let instances = M.Sidenav.init(elems)
+    
     const theme = localStorage.getItem('theme') || 'lightmode'
     document.body.classList.add(theme)
 

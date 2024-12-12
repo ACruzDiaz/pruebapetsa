@@ -57,3 +57,4 @@ en:
   confirmation_message: "Are you sure?"
   delete_confirmation: "Note was successfully destroyed."
   create_confirmation: "Note was successfully created."
+  sorting: [Oldest, Newest, A-Z, Z-A]

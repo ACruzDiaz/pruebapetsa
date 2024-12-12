@@ -1,14 +1,32 @@
 class NotesController < ApplicationController
   before_action :set_note, only: %i[ show edit update destroy ]
 
-  def index(key = "title",order = "asc")
-    @notes = Note.order(key: order)
-
+  def index()
+    
     filters = params[:filters]&.to_unsafe_h&.symbolize_keys
-    if filters && filters[:query].present?
-      @notes = @notes.search_by_title(filters[:query])
+    puts "FILTERS " + filters.inspect
+    res = filters ?  filters[:sort_id] : "created_at DESC"
+    @notes = Note.order(res)
+    if(filters && (filters[:sort_id] == "created_at DESC" || filters[:sort_id] == "created_at ASC" ))
+      @notes = @notes.group_by {|note| note.created_at.month}
+      @notes = @notes.flatten(2)
+    elsif not filters
+      @notes = @notes.group_by {|note| note.created_at.month}
+      @notes = @notes.flatten(2)
     end
-    @notes = @notes.group_by {|note| note.created_at.month}
+    
+    if filters && filters[:query].present? && filters[:sort_id].present? 
+      type = filters[:sort_id].split(" ")
+      if type[0] == 'created_at' && type[1].match(/\A(asc|desc)\z/i)
+        @notes = Note.order(created_at: type[1])
+        @notes = @notes.search_by_title(filters[:query] || " ")
+        @notes = @notes.group_by {|note| note.created_at.month}
+        @notes = @notes.flatten(2)
+      elsif type[0] == 'title' && type[1].match(/\A(asc|desc)\z/i)
+        @notes = Note.order(title: type[1])
+        @notes = @notes.search_by_title(filters[:query] || " ")
+      end
+    end
 
     @notes
   end

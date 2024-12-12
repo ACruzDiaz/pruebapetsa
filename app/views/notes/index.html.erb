@@ -1,33 +1,42 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <%= form_for :filters, html: { class: 'input-field col s12' }, method: 'get' do |f| %>
-    <%= material_icon.search.css_class('prefix') %>
-    <%= f.text_field :query, autofocus: true, placeholder: t('search_placeholder'), value: params.dig(:filters, :query) %>
+  <%= form_for :filters, html: { class: 'input-field col s12' }, method: 'get' do |form| %>
+  <div class="row">
+    <div class="col s12 m9 l9">
+      <%= material_icon.search.css_class('prefix') %>
+      <%= form.text_field :query, autofocus: true, placeholder: t('search_placeholder'), value: params.dig(:filters, :query) %>
+    </div>
+    <div class="col s12 m3 l3">
+      <%= form.select :sort_id, [[t('sorting')[0], 'created_at ASC'], [t('sorting')[1], 'created_at DESC'], [t('sorting')[2], 'title ASC'], [t('sorting')[3], 'title DESC']] %>
+      <%= form.submit 'Buscar', :name => ''%>
+    </div>  
+  </div>
   <% end %>
-
-  <% @notes.each do |month, setNotes| %>
-    <p class="month-section">
-      <%= t('date.month_names')[month]%>
-    <div class="divider"></div>
-    </p>
-      <% setNotes.each do |note|%>
-      <%= link_to note_path(note) do %>
-        <div class="col s12 m6 l4">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">
-                <%= note.title %>
-                <span class="right" style="font-size: 50%">
-                  <%= format_as_localtime note.created_at %>
+  
+    <% @notes.each do |note|%>
+      <% if note.is_a?(Numeric)%>
+        <p class="month-section"> 
+          <%= t('date.month_names')[note]%>
+        </p>
+        <div class="divider"></div>
+      <% else %>
+        <%= link_to note_path(note) do %>
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">
+                  <%= note.title %>
+                  <span class="right" style="font-size: 50%">
+                    <%= format_as_localtime note.created_at %>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
-        </div>
         <% end %>
+      <% end %>
     <% end %>
-  <% end %>
 </div>
 
 <div class="fixed-action-btn tooltipped" data-tooltip ="Create new note" data-position="bottom">
